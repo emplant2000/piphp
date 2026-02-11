@@ -140,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
     // CSRF チェック
     if (!validateCsrfToken($csrfToken)) {
-    //    die('CSRF validation failed');
+        die('CSRF validation failed');
     }
 
     switch ($action) {
